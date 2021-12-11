@@ -18,15 +18,14 @@ namespace QuangApp.Controllers
 
         public ActionResult Apple()
         {
-
             return View();
         }
         [HttpPost]
-        public ActionResult Store(string name )
+        public ActionResult Store(string name)
         {
             var student = new Student()
             {
-                Name = name               
+                Name = name,                              
             };
             myDBContext.Students.Add(student);
             myDBContext.SaveChanges();

@@ -1,14 +1,38 @@
-﻿
+﻿<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 @{
     ViewBag.Title = "Apple";
 }
-
 <h2>Danh Sách Nộp Phạt</h2>
+<form action="/action_page.php" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin" style="padding-right:27%;padding-left:27%">
+    <div class="w3-row w3-section">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+        <div class="w3-rest">
+            <input class="w3-input w3-border" name="first" type="text" placeholder="Mã SV">
+        </div>
+    </div>
+    <div class="w3-row w3-section">
+        <h5>Hình thức phạt</h5>
+        <input class="w3-radio" type="radio" name="payfine" value="Chống đẩy" checked>
+        <label>Chống đẩy</label>
+        <input class="w3-radio" type="radio" name="payfine" value="Nộp Tiền">
+        <label>Nộp tiền</label>
+    </div>
 
-<form action="/Home/Apple" method="post">
-    Name <input type="text" name="name" value="" />
-    Price <input type="text" name="name" Price="" />
-    Format<input type="text" name="Fomat" value="" />
-    <input type="submit" value="Save" />
+    <div class="w3-row w3-section">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge "></i></div>
+        <div class="w3-rest">
+            <p>
+                <input class="w3-input w3-border" type="text" placeholder="Số Tiền Phạt">
+            </p>
+            <p>
+                <input class="w3-input w3-border" type="text" placeholder="Số lần chống đẩy">
+            </p>
+        </div>
+    </div>
+    <label for="birthdaytime">Ngày nộp phạt </label>
+    <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+
+    <p class="w3-center">
+        <input class="w3-button w3-section w3-blue w3-ripple" type="submit" value="Save"/>
+    </p>
 </form>
-
